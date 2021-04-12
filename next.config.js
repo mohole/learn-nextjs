@@ -1,3 +1,3 @@
 module.exports = {
-  basePath: '/learn-nextjs',
+  basePath: process.env.NODE_ENV === 'production' ? '/learn-nextjs' : '',
 }
