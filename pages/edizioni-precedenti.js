@@ -2,9 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import Footer from './../components/footer';
+import { WP_REST } from './../url';
 
 export async function getStaticProps({ params }) {
-  const src = await fetch('https://blog.ted.com/wp-json/wp/v2/pages/2');
+  const src = await fetch(WP_REST + '/pages/2529');
   const resp = await src.json();
   const data = await {...resp};
   return {

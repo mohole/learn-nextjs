@@ -2,9 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import Footer from './../components/footer';
+import { WP_REST, URL } from './../url';
 
 export async function getStaticProps() {
-  const src = await fetch('https://blog.ted.com/wp-json/wp/v2/posts');
+  const src = await fetch(WP_REST + '/posts');
   const resp = await src.json();
   const posts = await [ ...resp ];
   return {
@@ -28,24 +29,24 @@ export default function Home({ posts }) {
         </h1>
 
         <p className="description">
-          Contenuti <i>presi in prestito</i> da <code>https://blog.ted.com/</code>
+          Contenuti <i>presi in prestito</i> da <code>{URL}</code>
         </p>
 
         <hr />
 
         <h3 className="title">Pagine statiche</h3>
         <div className="grid">
-          <Link href="/about">
+          <Link href="/edizioni-precedenti">
             <a className="card">
-              <h3>About TED Blog &rarr;</h3>
-              <p></p>
+              <h3>Edizioni precedenti &rarr;</h3>
+              <p>Fuori Mohole 2018 Archivio I volti del Fuorisalone</p>
             </a>
           </Link>
 
-          <Link href="/future">
+          <Link href="/volti-2018">
             <a className="card">
-              <h3>Peter Weyland at TED2023</h3>
-              <p>I will change the world</p>
+              <h3>I volti del Fuorisalone 2018 &rarr;</h3>
+              <p>Gallery</p>
             </a>
           </Link>
 

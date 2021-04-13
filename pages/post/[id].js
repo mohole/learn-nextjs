@@ -3,7 +3,9 @@ import Link from 'next/link';
 
 import Footer from './../../components/footer';
 
-const url = 'https://blog.ted.com/wp-json/wp/v2/posts';
+import { WP_REST } from './../../url';
+
+const url = WP_REST + '/posts';
 
 export async function getStaticPaths() {
   const res = await fetch(url);
