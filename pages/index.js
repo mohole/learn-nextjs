@@ -16,6 +16,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+
   return (
     <div className="container">
       <Head>
@@ -57,7 +58,7 @@ export default function Home({ posts }) {
           {posts.map((post, i) => <Link key={i} href={'/post/' + post.id}>
             <a className="card">
               <h3>{post.title.rendered}</h3>
-              <p dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></p>
+              <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div>
             </a>
           </Link>) }
         </div>
