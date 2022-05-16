@@ -1,3 +1,37 @@
+## React Workshop - Next.js
+
+## Requirements
+
+- [Node.js](https://nodejs.org/) v16+
+- [VS Code](https://code.visualstudio.com/)
+- [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) (_browser extension_)
+- [a Vercel account](https://vercel.com/) (free tier)
+- the [Vercel CLI](https://vercel.com/docs/cli)
+
+## What we are using
+
+- [React v18](https://reactjs.org/) - reactive UI library
+- [Next.js](https://nextjs.org/) - a React framework
+- [TailwindCSS](https://tailwindcss.com/) - CSS as utility classes
+- [DaisyUI](https://daisyui.com/) - UI components built on top of TailwindCSS
+- [LowDB](https://github.com/typicode/lowdb) - simple to use local JSON database
+
+## Lessons
+
+This track is mainly splitted in 5 chapters:
+
+1. [Intro & explanations]()
+2. [Setup of the evinronment]()
+3. [Create a SSG blog using a WordPress as a source]()
+4. [Develop a REST API from scratch]()
+5. [Where to go from here]()
+
+## License
+
+Released under the [MIT License](LICENSE).
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
