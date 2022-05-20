@@ -8,8 +8,9 @@ $ npx create-next-app@latest --typescript
 
 2. Add TailwindCSS [as described in the docs](https://tailwindcss.com/docs/guides/nextjs).
 
-3. install LowDB package
+3. install LowDB package and its types
 
 ```bash
 $ npm i lowdb
+$ npm i -D @types/lowdb
 ```

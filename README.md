@@ -15,6 +15,7 @@
 - [TailwindCSS](https://tailwindcss.com/) - CSS as utility classes
 - [DaisyUI](https://daisyui.com/) - UI components built on top of TailwindCSS
 - [LowDB](https://github.com/typicode/lowdb) - simple to use local JSON database
+- [uuid](https://github.com/uuidjs/uuid) - small library to create UUIDs
 
 ## Lessons
 
