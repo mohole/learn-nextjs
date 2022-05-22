@@ -21,8 +21,8 @@
 
 This track is mainly splitted in 5 chapters:
 
-1. [Intro & explanations]()
-2. [Setup of the evinronment]()
+1. [Intro & explanations](docs/01.intro.md)
+2. [Setup of the evinronment](docs/01.setup.md)
 3. [Create a SSG blog using a WordPress as a source]()
 4. [Develop a REST API from scratch]()
 5. [Where to go from here]()

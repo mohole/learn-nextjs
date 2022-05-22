@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Low, Memory } from "lowdb";
 import { v4 as uuidv4 } from "uuid";
-import { Excursion, Message } from "./../types";
+import { Excursion, Message } from "./../../../types/api";
 
 /**
  * Create a new LowDB adapter using in-memory persistance and a schema
