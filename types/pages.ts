@@ -3,6 +3,14 @@ type HTMLContent = {
   protected?: boolean;
 };
 
+export type Params = {
+  id: string;
+};
+
+export type PostParams = {
+  params: Params;
+};
+
 export type Post = {
   id: number;
   date: string;

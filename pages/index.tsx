@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 
-import { URL, WP_REST } from "./url";
+import { URL, WP_REST } from "../libs/url";
 import { Post } from "../types/pages";
 
 import { Card } from "./../components/card";
@@ -10,6 +9,13 @@ type Props = {
   posts: Post[];
 };
 
+/**
+ * This Next.js function is required to compute and self-inject props to
+ * the page component. In this case we are getting the post data from the
+ * WordPress website and creating a props object from it.
+ *
+ * https://nextjs.org/docs/basic-features/data-fetching/get-static-props
+ */
 export async function getStaticProps() {
   const src = await fetch(WP_REST + "/posts");
   const resp = await src.json();
