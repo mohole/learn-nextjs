@@ -1,4 +1,5 @@
 import Head from "next/head";
+import sanitizeHtml from "sanitize-html";
 
 import { URL, WP_REST } from "../libs/url";
 import { Post } from "../types/pages";
@@ -67,7 +68,9 @@ export default function Home({ posts }: Props) {
           {posts.map((post, i) => (
             <Card key={i} link={"/post/" + post.id} title={post.title.rendered}>
               <div
-                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                dangerouslySetInnerHTML={{
+                  __html: sanitizeHtml(post.excerpt.rendered),
+                }}
               ></div>
             </Card>
           ))}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import sanitizeHtml from "sanitize-html";
 
 import { Post, PostParams, Params } from "./../../types/pages";
 import { WP_REST } from "../../libs/url";
@@ -39,30 +40,32 @@ export async function getStaticProps({ params }: { params: Params }) {
 
 export default function PostLayout({ data }: { data: Post }) {
   return (
-    <div className="container">
+    <div className="container mx-auto py-5">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="title">{data.title.rendered} </h1>
+      <main className="py-5">
+        <h1 className="font-bold text-3xl my-5">{data.title.rendered} </h1>
 
-        <p className="description">
-          typed <code>{new Date(data.date).toLocaleDateString()}</code>
+        <p>
+          scritto il <code>{new Date(data.date).toLocaleDateString()}</code>
         </p>
 
-        <hr />
+        <hr className="my-2" />
 
         <div className="grid">
           <article
-            dangerouslySetInnerHTML={{ __html: data.content.rendered }}
+            dangerouslySetInnerHTML={{
+              __html: sanitizeHtml(data.content.rendered),
+            }}
           />
         </div>
 
-        <p className="description">
+        <p className="my-7">
           <Link href="/">
-            <a>&lt; Back to Home</a>
+            <a className="btn btn-primary">&lt; Back to Home</a>
           </Link>
         </p>
       </main>

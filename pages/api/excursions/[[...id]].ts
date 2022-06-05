@@ -27,7 +27,15 @@ export default async function handler(
    * Read the LowDB data, fallback to an empty array if we don't have any
    */
   await db.read();
-  db.data ||= [];
+  db.data ||= [
+    {
+      uuid: uuidv4(),
+      name: "test",
+      height: 2000,
+      photo: "",
+      timing: 180,
+    },
+  ];
 
   /**
    * Getting the UUID from the query parameters

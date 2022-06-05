@@ -16,6 +16,7 @@
 - [DaisyUI](https://daisyui.com/) - UI components built on top of TailwindCSS
 - [LowDB](https://github.com/typicode/lowdb) - simple to use local JSON database
 - [uuid](https://github.com/uuidjs/uuid) - small library to create UUIDs
+- [sanitizeHtml](https://www.npmjs.com/package/sanitize-html) - remove unsafe HTML tags from strings
 
 ## Lessons
 
