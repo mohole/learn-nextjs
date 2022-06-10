@@ -13,20 +13,31 @@
 - [React v18](https://reactjs.org/) - reactive UI library
 - [Next.js](https://nextjs.org/) - a React framework
 - [TailwindCSS](https://tailwindcss.com/) - CSS as utility classes
+- [Typography plugin](https://tailwindcss.com/docs/typography-plugin) - a TailwindCSS plugin to enable basic typography
 - [DaisyUI](https://daisyui.com/) - UI components built on top of TailwindCSS
 - [LowDB](https://github.com/typicode/lowdb) - simple to use local JSON database
 - [uuid](https://github.com/uuidjs/uuid) - small library to create UUIDs
 - [sanitizeHtml](https://www.npmjs.com/package/sanitize-html) - remove unsafe HTML tags from strings
+
+## Live demo
+
+The blog demo is visible at this url:
+
+[https://learn-nextjs-d9dytvgcs-moebiusmania.vercel.app](https://learn-nextjs-d9dytvgcs-moebiusmania.vercel.app)
+
+The REST API demo is available at:
+
+[https://learn-nextjs-d9dytvgcs-moebiusmania.vercel.app/api/excursions](https://learn-nextjs-d9dytvgcs-moebiusmania.vercel.app/api/excursions)
 
 ## Lessons
 
 This track is mainly splitted in 5 chapters:
 
 1. [Intro & explanations](docs/01.intro.md)
-2. [Setup of the evinronment](docs/01.setup.md)
-3. [Create a SSG blog using a WordPress as a source]()
-4. [Develop a REST API from scratch]()
-5. [Where to go from here]()
+2. [Setup of the evinronment](docs/02.setup.md)
+3. [Create a SSG blog using a WordPress as a source](docs/03.blog.md)
+4. [Develop a REST API from scratch](docs/04.api.md)
+5. [Where to go from here](docs/05.end.md)
 
 ## License
 

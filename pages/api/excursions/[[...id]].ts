@@ -96,7 +96,7 @@ export default async function handler(
   /**
    * on PUT it overwrites the content of the given item with the received request body data
    */
-  if (req.method === "GET") {
+  if (req.method === "PUT") {
     const index: number = db.data.findIndex(
       (item: Excursion): boolean => item.uuid === uuid
     );

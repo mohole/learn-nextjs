@@ -57,6 +57,7 @@ export default function PostLayout({ data }: { data: Post }) {
 
         <div className="grid">
           <article
+            className="prose lg:prose-lg max-w-none"
             dangerouslySetInnerHTML={{
               __html: sanitizeHtml(data.content.rendered),
             }}
