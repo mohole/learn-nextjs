@@ -1,8 +1,16 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
+import Cors from "cors";
 import { Low, Memory } from "lowdb";
 import { v4 as uuidv4 } from "uuid";
 import { Excursion, Message } from "./../../../types/api";
+
+/**
+ * Defining the allowed methods through CORS
+ */
+const cors = Cors({
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+});
 
 /**
  * Create a new LowDB adapter using in-memory persistance and a schema
@@ -24,16 +32,23 @@ export default async function handler(
   res: NextApiResponse<Excursion | Excursion[] | Message>
 ) {
   /**
+   * Quick cors lib init (3rd parameter should be a callback...)
+   */
+  await cors(req, res, () => {});
+
+  /**
    * Read the LowDB data, fallback to an empty array if we don't have any
    */
   await db.read();
   db.data ||= [
     {
       uuid: uuidv4(),
-      name: "test",
+      name: "Mount Nowhere",
       height: 2000,
-      photo: "",
+      photo: "https://picsum.photos/id/15/1024/768.webp",
       timing: 180,
+      notes:
+        "First, and succesful attempt! But I definetely need to buy better gear...",
     },
   ];
 
