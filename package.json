@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:static": "next build",
-    "postbuildbuild:static": "next export",
+    "postbuild:static": "next export",
     "start": "next start",
     "lint": "next lint"
   },
